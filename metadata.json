@@ -1,0 +1,5 @@
+{
+  "name": "AI Golf Simulator Vision",
+  "description": "Direct vision analysis prototype for golf simulators using Gemini AI.",
+  "requestFramePermissions": ["camera"]
+}
