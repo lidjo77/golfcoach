@@ -1,8 +1,17 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo, FormEvent } from 'react';
 import { Camera, Activity, History, ChevronRight, AlertCircle, CheckCircle2, Loader2, Target, Gauge, Wind, MoveUpRight, RotateCcw, BarChart3, LayoutDashboard, Settings2, ScanLine, MessageSquare, Send, Volume2, VolumeX, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { analyzeShotImage, ShotData, askCoach } from './services/geminiService';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+
+declare global {
+  interface Window {
+    aistudio?: {
+      hasSelectedApiKey: () => Promise<boolean>;
+      openSelectKey: () => Promise<void>;
+    };
+  }
+}
 
 type AppStatus = 'idle' | 'initializing' | 'waiting' | 'analyzing' | 'detected' | 'error';
 type Tab = 'analysis' | 'trends';
@@ -355,7 +364,7 @@ export default function App() {
 
   const clubs = ['Driver', '3-Wood', '5-Wood', 'Hybrid', '4-Iron', '5-Iron', '6-Iron', '7-Iron', '8-Iron', '9-Iron', 'PW', 'GW', 'SW', 'LW'];
 
-  const handlePinSubmit = (e: React.FormEvent) => {
+  const handlePinSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (pinInput === REQUIRED_PIN) {
       setIsAuthenticated(true);

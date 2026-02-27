@@ -12,7 +12,11 @@ Denna applikation är en vision-baserad prototyp designad för att automatiskt l
 
 ### 2. AI Coach & Feedback
 *   **Omedelbar analys:** Varje slag får ett betyg (1-10) och en teknisk analys.
-*   **Pro Suggestions:** AI:n ger konkreta tips på hur du kan förbättra ditt nästa slag baserat på din data.
+*   **Hyper-konkreta tips:** AI:n ger inte bara data, utan konkreta instruktioner som följer strukturen:
+    1. Vad som händer (t.ex. "Du slår troligen lite ner på bollen")
+    2. Varför det händer (t.ex. "Bollen ligger för långt bak")
+    3. Exakt vad spelaren ska göra (t.ex. "Flytta bollen 1–2 cm längre fram i stansen")
+    4. Vad de ska känna (t.ex. "Känn att du slår upp genom bollen")
 *   **Fråga Coachen (Chatt):** En interaktiv chatt där du kan ställa frågor om din teknik. Coachen har koll på din senaste historik och vilken klubba du använder.
 *   **Röstfeedback:** Appen kan läsa upp dina resultat högt så att du slipper gå fram till telefonen mellan slagen.
 

@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AI Golf Vision 🏌️‍♂️🤖
 
-# Run and deploy your AI Studio app
+En vision-baserad golfassistent som analyserar din simulator-data i realtid med hjälp av Google Gemini AI.
 
-This contains everything you need to run your app locally.
+## Snabbstart
+1.  **Starta:** Öppna appen och ange PIN-kod `1234`.
+2.  **Setup:** Rikta kameran mot din golfsimulators skärm. Använd kalibreringsguiden för att centrera datan.
+3.  **Välj klubba:** Välj den klubba du tränar med i menyn.
+4.  **Träna:** Klicka på **"START MONITORING"**. Appen detekterar nu automatiskt nya slag och ger dig feedback via röst och skärm.
 
-View your app in AI Studio: https://ai.studio/apps/ff09c518-dc28-44b1-aa8a-0aea35a943e9
+## Huvudfunktioner
+- **AI Vision:** Extraherar automatiskt bollhastighet, carry, spin och launch angle.
+- **Hyper-konkret coaching:** Få tips som en riktig tränare (Vad, Varför, Gör, Känn).
+- **Röstfeedback:** Resultaten läses upp högt (valbart).
+- **Sessionshantering:** Spara och jämför olika träningspass.
+- **AI Coach Chatt:** Ställ frågor om din teknik direkt till en AI-expert.
 
-## Run Locally
+## Installation
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Dokumentation
+- [Arkitektur](ARCHITECTURE.md)
+- [AI Regler](AI_RULES.md)
+- [Säkerhet](SECURITY.md)
+- [Användarflöden](USER_FLOWS.md)
+- [Design Tokens](DESIGN_TOKENS.md)
